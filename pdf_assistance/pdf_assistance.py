@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-os.environ["OPEN_AI"] = os.environ["OPEN_AI"]
+os.environ["GEMINI_API_KEY"] = os.environ["GEMINI_API_KEY"]
 db_url = "postgresql+psycopg://ai:ai@localhost:5532/ai"
 
 

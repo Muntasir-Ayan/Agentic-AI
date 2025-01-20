@@ -4,6 +4,9 @@ from phi.model.groq import Groq
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.website import WebsiteTools
 # import openai
+import time
+from tiktoken import get_encoding
+
 
 import os
 from dotenv import load_dotenv
@@ -37,4 +40,10 @@ multi_ai_agent=Agent(
     markdown=True,
 )
 
+
+# Measure response time
+start_time = time.time() 
 multi_ai_agent.print_response("Search the web page and generate an overview: 'https://thecatapi.com/'", markdown=True)
+end_time = time.time()  
+
+print(f"Response Time: {end_time - start_time:.2f} seconds")

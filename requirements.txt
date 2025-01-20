@@ -11,3 +11,13 @@ openai
 python-docx
 python-multipart
 beautifulsoup4
+
+AIzaSyCd5duoB6JPX2Gz5CqbmeIcDefvXGkpVLM
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCd5duoB6JPX2Gz5CqbmeIcDefvXGkpVLM" \
+-H 'Content-Type: application/json' \
+-X POST \
+-d '{
+  "contents": [{
+    "parts":[{"text": "Explain how AI works"}]
+    }]
+   }'

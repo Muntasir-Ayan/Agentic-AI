@@ -2,6 +2,7 @@ from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
 from phi.tools.duckduckgo import DuckDuckGo
+import time
 # import openai
 
 import os
@@ -43,4 +44,10 @@ multi_ai_agent=Agent(
     markdown=True,
 )
 
+
+# Measure response time
+start_time = time.time() 
 multi_ai_agent.print_response("Summarize analyst recommendation and share the latest news for NVDA",stream=True)
+end_time = time.time()  
+
+print(f"Response Time: {end_time - start_time:.2f} seconds")
